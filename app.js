@@ -1,7 +1,7 @@
 //import
 const express = require('express');
 const app = express();
-//const port = 5010;
+const port = 5010;
 //app.set('port', process.env.PORT || 3000)
 
 // Static files
@@ -22,7 +22,6 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about', {text: 'This is about'})
 });
-
 
 let listener = app.listen();
 console.log('Listening to port number ${listener.address().port}');
